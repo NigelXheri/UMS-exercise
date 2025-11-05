@@ -2,13 +2,14 @@ import java.time.LocalDate;
 
 public class Student {
 
+    // 1. Attributes
     private static int baseId = 100;
     private final int studentId;
     private String name;
     private double gpa;
     private final int enrollmentYear;
 
-
+    // 2. Constructors
     public Student(){
         this.studentId = baseId++;
         this.name = "";
@@ -23,7 +24,7 @@ public class Student {
         this.enrollmentYear = enrollmentYear;
     }
 
-
+    // 3. Getters / Setters
     public int getStudentId() {
         return studentId;
     }
@@ -40,19 +41,19 @@ public class Student {
         return enrollmentYear;
     }
 
-
     public void setName(String name){
         this.name = name;
     }
 
+    // 4. toString()
     @Override
     public String toString(){
         return "Student: " + name + " with id " + studentId + " enrolled in " + enrollmentYear + " has a GPA of " + gpa;
     }
 
-
+    // 5. Other Methods
     public boolean isGpaValid(){
-        return (gpa >= 0.0 || gpa <= 4.0);
+        return (gpa >= 0.0 && gpa <= 4.0);
     }
 
     public boolean updateGpa(double gpa){

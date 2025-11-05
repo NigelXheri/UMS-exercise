@@ -1,11 +1,12 @@
 public class Classroom {
 
+    // 1. Attributes
     private String roomNumber;
     private String buildingName;
     private int capacity;
     private boolean hasProjector;
 
-
+    // 2. Constructors
     public Classroom() {
         this.roomNumber = "";
         this.buildingName = "";
@@ -20,7 +21,7 @@ public class Classroom {
         this.hasProjector = hasProjector;
     }
 
-
+    // 3. Getters / Setters
     public String getRoomNumber() {
         return roomNumber;
     }
@@ -53,6 +54,7 @@ public class Classroom {
         this.hasProjector = hasProjector;
     }
 
+    // 4. toString()
     @Override
     public String toString() {
         return "Classroom{" +
@@ -63,7 +65,7 @@ public class Classroom {
                 '}';
     }
 
-
+    // 5. Other Methods
     public void displayClassroomInfo(){
         System.out.println(this.toString());
     }

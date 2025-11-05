@@ -1,11 +1,13 @@
 public class Professor {
 
+    // 1. Attributes
     private static int baseId = 1;
     private int employeeID;
     private String name;
     private String specialization;
     private int yearsOfExperience;
 
+    // 2. Constructors
     public Professor() {
         this.employeeID = baseId++;
         this.name = "";
@@ -19,6 +21,7 @@ public class Professor {
         this.yearsOfExperience = yearsOfExperience;
     }
 
+    // 3. Getters / Setters
     public String getSpecialization() {
         return specialization;
     }
@@ -51,11 +54,13 @@ public class Professor {
         this.employeeID = employeeID;
     }
 
+    // 4. toString()
     @Override
     public String toString(){
         return "Employee " + name + " specialized in " + specialization + " has " + yearsOfExperience +" years of experience.";
     }
 
+    // 5. Other Methods
     public boolean isExpreienced(){
         return yearsOfExperience > 5;
     }

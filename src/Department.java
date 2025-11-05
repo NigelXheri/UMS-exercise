@@ -1,11 +1,12 @@
 public class Department {
 
+    // 1. Attributes
     private String departmentName;
     private String location;
     private int numberOfFaculty;
     private String departmentHead;
 
-
+    // 2. Constructors
     public Department() {
         this.departmentName = "";
         this.location = "";
@@ -20,6 +21,7 @@ public class Department {
         this.departmentHead = departmentHead;
     }
 
+    // 3. Getters / Setters
     public String getDepartmentName() {
         return departmentName;
     }
@@ -52,6 +54,7 @@ public class Department {
         this.departmentHead = departmentHead;
     }
 
+    // 4. toString()
     @Override
     public String toString() {
         return "Department{" +
@@ -62,6 +65,7 @@ public class Department {
                 '}';
     }
 
+    // 5. Other Methods
     public void addFaculty(){
         numberOfFaculty++;
     }

@@ -1,11 +1,12 @@
 public class Course {
 
+    // 1. Attributes
     private String courseCode;
     private String courseName;
     private int credits;
     private String semester;
 
-
+    // 2. Constructors
     public Course(){
         this.courseCode = "";
         this.courseName = "";
@@ -19,7 +20,7 @@ public class Course {
         this.semester = semester;
     }
 
-
+    // 3. Getters / Setters
     public String getCourseCode() {
         return courseCode;
     }
@@ -52,11 +53,13 @@ public class Course {
         this.semester = semester;
     }
 
+    // 4. toString()
     @Override
     public String toString(){
         return "This is course " + courseName + " of the " + semester + " semester codenamed " + courseCode + " with " + credits + " ECTS ";
     }
 
+    // 5. Other Methods
     public void displayCourseInfo(){
         System.out.println(this.toString());
     }
