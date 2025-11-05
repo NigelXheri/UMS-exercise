@@ -45,6 +45,7 @@ public class Student {
         this.name = name;
     }
 
+    @Override
     public String toString(){
         return "Student: " + name + " with id " + studentId + " enrolled in " + enrollmentYear + " has a GPA of " + gpa;
     }

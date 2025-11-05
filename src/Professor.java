@@ -51,7 +51,7 @@ public class Professor {
         this.employeeID = employeeID;
     }
 
-
+    @Override
     public String toString(){
         return "Employee " + name + " specialized in " + specialization + " has " + yearsOfExperience +" years of experience.";
     }
