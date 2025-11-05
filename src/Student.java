@@ -16,6 +16,7 @@ public class Student {
         this.enrollmentYear = LocalDate.now().getYear();
     }
     public Student(String name, double gpa, int enrollmentYear){
+        if (gpa < 0.0 || gpa > 4.0) throw new IllegalArgumentException("GPA value is invalid.");
         this.studentId = baseId++;
         this.name = name;
         this.gpa = gpa;
