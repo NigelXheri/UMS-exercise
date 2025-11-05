@@ -14,6 +14,35 @@ public class Main{
             "================================================================================================================================================="
         );
 
+        // ============================= ACTUAL CODE =============================
+
+
+        Course cPhy = new Course("PHY151", "Physics 1", 6, "Fall 2025");
+        Course cMth = new Course("MTH151", "Calculus 1", 6, "Fall 2025");
+        System.out.println(cPhy);
+        System.out.println(cMth);
+
+        Student sEni = new Student("Eni Mera", 3.5, 2025);
+        Student sHysni = new Student("Hysni Bega", 2.8, 2025);
+        System.out.println(sEni);
+        System.out.println(sHysni);
+        sHysni.updateGpa(-1.0);
+        sHysni.updateGpa(3.8);
+        System.out.println(sHysni);
+
+
+        Professor pAlan = new Professor("Alan Turing", "Cryptography", 90);
+        Professor pCharles = new Professor("Charles Babbage", "Mathematician", 6);
+        System.out.println(pAlan);
+        System.out.println(pCharles);
+
+        Classroom a1 = new Classroom("A1", "G3", 120, true);
+        Classroom c1 = new Classroom("C1", "G3", 15, true);
+        System.out.println(a1);
+        System.out.println(c1);
+
+
+
 
 
     }

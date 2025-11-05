@@ -52,12 +52,12 @@ public class Student {
     }
 
     // 5. Other Methods
-    public boolean isGpaValid(){
+    private boolean isGpaValid(){
         return (gpa >= 0.0 && gpa <= 4.0);
     }
 
     public boolean updateGpa(double gpa){
-        if (!isGpaValid()) return false;
+        if (!isGpaValid()){ return false;}
         this.gpa = gpa;
         return true;
     }
