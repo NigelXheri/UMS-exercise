@@ -19,11 +19,6 @@ public class Main{
         // ============================= ACTUAL CODE =============================
 
 
-        Course cPhy = new Course("PHY151", "Physics 1", 6, "Fall 2025");
-        Course cMth = new Course("MTH151", "Calculus 1", 6, "Fall 2025");
-        System.out.println(cPhy.getFullCourseName());
-        cMth.displayCourseInfo();
-
         Student sEni = new Student("Eni Mera", 3.5, 2025);
         Student sHysni = new Student("Hysni Bega", 2.8, 2025);
         System.out.println(sEni);
@@ -39,6 +34,13 @@ public class Main{
         System.out.println(pAlan.getAcademicTitle());
         System.out.println(pCharles);
 
+        Course cPhy = new Course("PHY151", "Physics 1", 6, "Fall 2025");
+        Course cMth = new Course("MTH151", "Calculus 1", 6, "Fall 2025");
+        cPhy.assignProfessor(pCharles);
+        cMth.assignProfessor(pAlan);
+        System.out.println(cPhy.getFullCourseName());
+        cMth.displayCourseInfo();
+
         Classroom a1 = new Classroom("A1", "G3", 120, true);
         Classroom c1 = new Classroom("C1", "G3", 15, true);
         System.out.println(a1);
@@ -49,12 +51,13 @@ public class Main{
 
         Department dep1 = new Department("Engineering", "Building 2", 4, "Linus Torvalds");
         dep1.addFaculty();
-        System.out.println("The nubmer of faculty is now " + dep1.getNumberOfFaculty());
+        System.out.println("The number of faculty is now " + dep1.getNumberOfFaculty());
         int iterations = dep1.getNumberOfFaculty();
         for (int i = 0; i <= iterations; i++){
             dep1.removeFaculty();
             System.out.println(dep1.getNumberOfFaculty()); // Tries to remove one more than there are available
         }
+
 
 
 

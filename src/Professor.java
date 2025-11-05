@@ -6,6 +6,7 @@ public class Professor {
     private String name;
     private String specialization;
     private int yearsOfExperience;
+    private Department department;
 
     // 2. Constructors
     public Professor() {
@@ -19,6 +20,13 @@ public class Professor {
         this.name = name;
         this.specialization = specialization;
         this.yearsOfExperience = yearsOfExperience;
+    }
+    public Professor(String name, String specialization, int yearsOfExperience, Department department){
+        this.employeeID = baseId++;
+        this.name = name;
+        this.specialization = specialization;
+        this.yearsOfExperience = yearsOfExperience;
+        this.department = department;
     }
 
     // 3. Getters / Setters
@@ -54,10 +62,14 @@ public class Professor {
         this.employeeID = employeeID;
     }
 
+    public Department getDepartment(){
+        return department;
+    }
+
     // 4. toString()
     @Override
     public String toString(){
-        return "Employee " + name + " specialized in " + specialization + " has " + yearsOfExperience +" years of experience.";
+        return "Professor " + name + " specialized in " + specialization + " has " + yearsOfExperience +" years of experience and is part of department " + department;
     }
 
     // 5. Other Methods
@@ -72,5 +84,17 @@ public class Professor {
         return "Assistant Professor";
     }
 
+    public void assignDepartment(Department d){
+        department = d;
+    }
+
+    public String getDepartmentName(){
+        if (department == null) return "Not Assigned";
+        return department.getDepartmentName();
+    }
+
+    public void displayProfile(){
+        System.out.println(toString());
+    }
 
 }
