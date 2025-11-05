@@ -53,7 +53,7 @@ public class Professor {
 
 
     public String toString(){
-        return "Employee " + this.name + " specialized in " + this.specialization + " has " + this.yearsOfExperience +" years of experience.";
+        return "Employee " + name + " specialized in " + specialization + " has " + yearsOfExperience +" years of experience.";
     }
 
     public boolean isExpreienced(){

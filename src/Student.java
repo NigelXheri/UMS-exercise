@@ -46,32 +46,33 @@ public class Student {
     }
 
     public String toString(){
-        return "Student: " + this.name + " with id " + studentId + " enrolled in " + enrollmentYear + " has a GPA of " + this.gpa;
+        return "Student: " + name + " with id " + studentId + " enrolled in " + enrollmentYear + " has a GPA of " + gpa;
     }
 
 
+    public boolean isGpaValid(){
+        return (gpa >= 0.0 || gpa <= 4.0);
+    }
+
     public boolean updateGpa(double gpa){
-        if (gpa < 0.0 || gpa > 4.0) return false;
+        if (!isGpaValid()) return false;
         this.gpa = gpa;
         return true;
     }
 
     public void calculateAcademicStanding(){
-        if (this.gpa < 0.0 || this.gpa > 4.0) {
+        if (!isGpaValid()){
             System.out.println("GPA is invalid");
         }
-        else if (this.gpa >= 2.0){
+        else if (gpa >= 2.0){
             System.out.println("Good Standing");
-            return;
         }
-        else if (this.gpa >= 1.5 && this.gpa < 2.0) {
+        else if (gpa >= 1.5) {
             System.out.println("Academic Probation");
         }
         else{
             System.out.println("Academic Warning");
         }
-
-
     }
 
 
