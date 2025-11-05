@@ -52,18 +52,21 @@ public class Student {
     }
 
     // 5. Other Methods
-    private boolean isGpaValid(){
+    private boolean isGpaValid(double gpa){
         return (gpa >= 0.0 && gpa <= 4.0);
     }
 
     public boolean updateGpa(double gpa){
-        if (!isGpaValid()){ return false;}
+        if (!isGpaValid(gpa)){
+            System.out.println("Could not update GPA to " + gpa + " because it is invalid.");
+            return false;
+        }
         this.gpa = gpa;
         return true;
     }
 
     public void calculateAcademicStanding(){
-        if (!isGpaValid()){
+        if (!isGpaValid(gpa)){
             System.out.println("GPA is invalid");
         }
         else if (gpa >= 2.0){

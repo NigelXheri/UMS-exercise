@@ -67,7 +67,7 @@ public class Professor {
 
     public String getAcademicTitle(){
         if (isExpreienced()){
-            return (yearsOfExperience <= 10) ?  "Associate Professor" : "Professor";
+            return name + " is a " + ((yearsOfExperience <= 10) ?  "Associate Professor" : "Professor");
         }
         return "Assistant Professor";
     }
